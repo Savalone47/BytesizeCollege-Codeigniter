@@ -85,7 +85,7 @@
                 <?php elseif($this->session->type_user == 1):?>
                     <?php
                         $data['notice'] = $this->Notification_model->get_all_notification_count($this->session->id_user);
-                        $data['get_notice'] = $this->Notification_model->get_notifications($this->session->id_user);
+                        //$data['get_notice'] = $this->Notification_model->get_notifications($this->session->id_user);
                         $this->load->view('header_footer/notice/notice', $data);
 
                     ?>
