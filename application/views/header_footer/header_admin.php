@@ -81,17 +81,15 @@
                     ?>
                     <!-- Student Profile End -->
 
+
                     <!-- Admin Profile Start -->
                 <?php elseif($this->session->type_user == 1):?>
                     <?php
                         $data['notice'] = $this->Notification_model->get_all_notification_count($this->session->id_user);
-                        //$data['get_notice'] = $this->Notification_model->get_notifications($this->session->id_user);
                         $this->load->view('header_footer/notice/notice', $data);
-
                     ?>
                     <!-- Admin Profile End -->
                 <?php endif;?>
-
             </div>
         </div>
 
@@ -314,6 +312,12 @@
                                 <a href="<?php echo site_url("exam/resultStudent")?>" class="nav-link nav-toggle">
                                     <i class="material-icons">local_library</i>
                                     <span class="title">My results</span>
+                                </a>
+                            </li>
+                            <li class="external">
+                                <a href="<?php echo site_url('notification/index');?>" class="nav-link nav-toggle">
+                                    <i class="fa fa-bell-o"></i>
+                                    <span class="title">Annoucements</span>
                                 </a>
                             </li>
                             <li>
