@@ -1,3 +1,3 @@
-# vinco-course-bytesize
+# School college
 
-official repository for bytesize
+official repository for school
